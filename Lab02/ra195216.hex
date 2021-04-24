@@ -1,0 +1,21 @@
+# Caio Henrique Pardal dos Santos RA:195216
+
+########### Logic ###########
+000 09 110 0B 101  # Loads X value into MQ | Multiplies x and gravity values
+001 0A 000 21 106  # Transfer value from MQ to AC | Stores Y value
+002 0A 000 0C 104  # Transfer value from MQ to AC | Divide 2 by Y value
+003 0A 000 21 107  # Transfer value from MQ to AC | Stores K value
+004 01 106 0C 107  # Loads Y value into AC | Divide Y by K value
+005 0A 000 05 107  # Moves the result to AC | Adds K to division result
+006 0C 104 0A 000  # Divide K by 2 | Moves the result to AC
+007 21 107 01 102  # Stores K value | Loads the counter
+008 06 103 21 102  # Substract the counter | Store the new counter
+009 01 102 0F 004  # Loads the counter | Do the loop
+00A 01 107 0D 400  # Loads Aprox value into AC | Jumps into position 400 in memory
+
+########### Variables ###########
+101 000000000A # Gravity
+102 0000000009 # Counter
+103 0000000001 # Constant 1
+104 0000000002 # Constant 2
+110 0000000000DAC # X value

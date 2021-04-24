@@ -1,0 +1,17 @@
+# Caio Henrique Pardal dos Santos RA:195216
+
+000 01 3FD 06 05C # Load the array's size | Subtract 1
+001 21 3FD 01 3FF # Store the array's size | Load the first array address
+002 05 05B 13 004 # Add i to the first array address | Store the address to first operation with the first array
+003 01 3FE 05 05B # Load the second array address | Add i to the second array address
+004 12 005 09 000 # Store the address to first operation with the second array | Load the element of the first array into MQ
+005 0B 000 0A 004 # Multiply the element of the second array with the element in MQ | Transfer the value from MQ to AC
+006 05 05A 21 05A # Add the value to soma | Store soma
+007 01 05B 05 05C # Load i | Add 1 to i
+008 21 05B 01 3FD # Store i | Load array size
+009 06 05B 10 001 # Subtract N from i | Do the loop 
+00A 01 05A 0D 400 # Load Soma to AC | Jumps into position 400 in memory
+
+05A 0000000000 # Soma
+05B 0000000000 # i
+05C 0000000001 # Constante 1
